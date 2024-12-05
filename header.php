@@ -63,7 +63,7 @@ $usuario = $_SESSION['usuario'];
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-handshake-o"></i>  Proveedores</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lightbulb-o"></i>  Productos</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-text"></i>  Ventas</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-usd"></i>  Compras</a>
+      <a href="readcompras.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-usd"></i>  Compras</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
     </div>
   </nav>
