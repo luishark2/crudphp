@@ -58,7 +58,7 @@ $usuario = $_SESSION['usuario'];
     <div class="w3-bar-block">
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
       <a href="readcliente.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Clientes</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-handshake-o"></i>  Proveedores</a>
+      <a href="readproveedores.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-handshake-o"></i>  Proveedores</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lightbulb-o"></i>  Productos</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-text"></i>  Ventas</a>
       <a href="readcompras.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-usd"></i>  Compras</a>

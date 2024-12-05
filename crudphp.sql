@@ -39,6 +39,22 @@ CREATE TABLE `clientes` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `proveedores`
+--
+
+CREATE TABLE `proveedores` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `telefono` varchar(12) NOT NULL,
+  `direccion` varchar(250) NOT NULL,
+  `empresa` varchar(100) NOT NULL,
+  `imagen` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
