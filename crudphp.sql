@@ -93,6 +93,26 @@ ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
+
+
+--Tabla compras 
+CREATE TABLE `compras` (
+  `id` int(11) NOT NULL,
+  `fecha_compra` date NOT NULL,
+  `producto` varchar(250) NOT NULL,
+  `precio` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Índices para la tabla `compras`
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`id`);
+
+-- AUTO_INCREMENT para la tabla `compras`
+ALTER TABLE `compras`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
