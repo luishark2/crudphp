@@ -80,13 +80,13 @@ INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `password`, `tipo`, `imagen`) 
 --
 
 --
--- Indices de la tabla `clientes`
+-- Índices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Índices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
@@ -107,11 +107,11 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
 
+--
+-- Tabla compras 
+--
 
-
---Tabla compras 
 CREATE TABLE `compras` (
   `id` int(11) NOT NULL,
   `fecha_compra` date NOT NULL,
@@ -119,16 +119,54 @@ CREATE TABLE `compras` (
   `precio` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
 -- Índices para la tabla `compras`
+--
 ALTER TABLE `compras`
   ADD PRIMARY KEY (`id`);
 
+--
 -- AUTO_INCREMENT para la tabla `compras`
+--
 ALTER TABLE `compras`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+-- --------------------------------------------------------
 
+--
+-- Estructura de tabla para la tabla `productos`
+--
+
+CREATE TABLE `productos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `descripcion` text NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `imagen` varchar(255) DEFAULT 'default.jpg',
+  `proveedor_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `proveedor_id` (`proveedor_id`);
+
+--
+-- AUTO_INCREMENT para la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Relación con la tabla `proveedores`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_proveedor_fk` FOREIGN KEY (`proveedor_id`) REFERENCES `proveedores` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
