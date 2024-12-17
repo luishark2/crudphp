@@ -1,8 +1,8 @@
 <?php $url_base = "http://localhost/crudphp/";
 session_start();
 if (!isset($_SESSION['usuario'])) {
-  header("Location: login.php");
-  exit();
+    header("Location: login.php");
+    exit();
 }
 $usuario = $_SESSION['usuario'];
 ?>
@@ -60,6 +60,7 @@ $usuario = $_SESSION['usuario'];
       <a href="readcliente.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Clientes</a>
       <a href="readproveedores.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-handshake-o"></i>  Proveedores</a>
       <a href="readproductos.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lightbulb-o"></i>  Productos</a>
+      <a href="readventas.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-text"></i>  Ventas</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-text"></i>  Ventas</a>
       <a href="readcompras.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-usd"></i>  Compras</a>
       <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
