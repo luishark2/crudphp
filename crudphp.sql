@@ -67,6 +67,16 @@ CREATE TABLE `usuarios` (
   `imagen` varchar(255) DEFAULT 'default.jpg'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+CREATE TABLE ventas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    fecha_venta DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10, 2) NOT NULL,
+    estado ENUM('Pendiente', 'Completada', 'Cancelada') DEFAULT 'Pendiente',
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+
 --
 -- Volcado de datos para la tabla `usuarios`
 --
